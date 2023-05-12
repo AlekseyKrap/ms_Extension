@@ -1,0 +1,21 @@
+{
+  "name": "ms_extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && vite build --config vite-lib.config.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.235",
+    "@types/node": "^18.16.3",
+    "@types/tabulator-tables": "^5.4.8",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "tabulator-tables": "^5.4.4"
+  }
+}

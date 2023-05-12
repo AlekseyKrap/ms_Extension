@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Ms Extension",
+  "version": "0.0.1",
+  "description": "Ms Extension",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "Показать логи"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background":{
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [ {
+    "resources": [ "execute.js" ],
+    "matches": [ "<all_urls>" ]
+  }],
+  "permissions": ["scripting", "activeTab","tabs"]
+}
